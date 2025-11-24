@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaHome, FaUsers, FaUserPlus } from "react-icons/fa";
+import { FaDroplet } from "react-icons/fa6"; // Import droplet icon
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -11,8 +12,9 @@ const Navbar = () => {
     <nav className="flex justify-between items-center p-4 bg-red-600 text-white relative z-50">
       
       {/* Logo */}
-      <div className="text-2xl font-semibold">
-        <h2>Blood Finder</h2>
+      <div className="flex items-center text-2xl font-semibold gap-2">
+        <FaDroplet className="text-3xl" />
+        <span className="hidden md:inline">Blood Finder</span> {/* Hidden on small screens */}
       </div>
 
       {/* Desktop Links */}
